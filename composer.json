@@ -1,0 +1,47 @@
+{
+    "name": "cushon/codecept-finder",
+    "description": "PHP lib for finding and outputting all tests from a Codeception suite XML config file.",
+    "license": "GPL-2.0-or-later",
+    "authors": [
+        {
+            "name": "Chris Peake",
+            "email": "chris.peake@cushon.co.uk"
+        }
+    ],
+    "require": {
+        "php": "^7.4||^8.0",
+        "codeception/codeception": "^4.2",
+        "phpunit/phpunit": "^9.5",
+        "symfony/console": "^3.4||^4.4",
+        "codeception/module-phpbrowser": "^1.0.0",
+        "codeception/module-asserts": "^1.0.0"
+    },
+    "require-dev": {
+        "dealerdirect/phpcodesniffer-composer-installer": "^0.7.1",
+        "drupal/coder": "~8.3.12",
+        "phpcompatibility/php-compatibility": "^9.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "CodeceptFinder\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "CodeceptFinder\\Tests\\": "tests/"
+        }
+    },
+    "bin": [
+        "codecept-finder"
+    ],
+    "config": {
+        "bin-dir": "bin/",
+        "preferred-install": {
+            "*": "dist"
+        },
+        "sort-packages": true,
+        "allow-plugins": {
+            "dealerdirect/phpcodesniffer-composer-installer": true
+        }
+    }
+}
