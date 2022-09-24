@@ -2,7 +2,7 @@
 
 This is a helper CLI tool that queries codeception.yml files and associated test suite.xml files
 to get a list of test filenames and print them. This is useful if you want to split tests to run
-them in parallel based on timings on CI tools such as CirclCI.
+them in parallel based on timings on CI tools such as CircleCI.
 
 It takes inspiration from phpunit-finder.
 
