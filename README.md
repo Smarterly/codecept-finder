@@ -1,8 +1,8 @@
 # Codecept Finder
 
-This is a helper CLI tool that queries phpunit.xml files to get a list of test
-filenames and print them. This is useful if you want to split tests to run them
-in parallel based on timings on CI tools such as CirclCI.
+This is a helper CLI tool that queries codeception.yml files and associated test suite.xml files
+to get a list of test filenames and print them. This is useful if you want to split tests to run
+them in parallel based on timings on CI tools such as CirclCI.
 
 It takes inspiration from phpunit-finder.
 
@@ -14,17 +14,11 @@ Install with composer:
 
 ## Usage
 
-You can run with defaults using:
+You can run by passing one or more test suite names as arguments:
 
-`./vendor/bin/codecept-finder`
-
-By default, it will look for all test suites to scan.
-
-You can filter by specific test suites as follows:
-
-`./vendor/bin/codecept-finder unit functional`
+`./vendor/bin/codecept-finder <test-suite-name>...`
 
 ## Configuration
 
-codecept-finder assumes you have a codeception.yml in the root of your project. You can
+codecept-finder assumes you have a codeception.yml in the working directory. You can
 override the path using the `--config-file` option.
